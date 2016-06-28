@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery-1.12.0.js" charset="utf-8"></script>
+    <script src="/js/index.js"></script>
+  </head>
+  <body>
+    <div id="original">
+      <div id="shape_info">Shape Info</div>
+       <% for(var i=0; i<shapes.length; i++) {%>
+          <img  mongo_id="<%=shapes[i]._id%>" color="<%=shapes[i].color%>" name="<%=shapes[i].name%>" src=<%=shapes[i].link%> />
+      <% } %>
+    </div>
+  </body>
+</html>
