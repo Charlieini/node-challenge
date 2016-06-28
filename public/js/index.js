@@ -1,12 +1,10 @@
-var socket = io();
+var socket = io('http://localhost:8080');
 
-socket.on('colors', function(){
-  console.log('color');
+socket.on('colors_sorting', function(){
   sortShapes('color');
 });
 
-socket.on('shapes', function(){
-  console.log('shape');
+socket.on('shape_sorting', function(){
   sortShapes("name");
 });
 

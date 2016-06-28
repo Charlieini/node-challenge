@@ -5,10 +5,18 @@ var io = require('socket.io')(http);
 
 http.listen(8080);
 
-io.on('connection', function(client) {
-  client.on('color', function() {
-    console.log("color server");
-    client.emit('calor');
+var clients = []
+
+io.on('connect', function(client) {
+	console.log("connected")
+	clients.push(client)
+  client.on('colors', function() {
+    console.log("Emitting Color sorting");
+    io.sockets.emit('colors_sorting');
+  });
+  client.on('shapes', function(){
+    console.log("Emitting Shape sorting");
+    io.sockets.emit('shape_sorting');
   });
 });
 

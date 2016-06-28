@@ -1,4 +1,9 @@
 var socket = io();
+console.log(socket);
+
+socket.on('connect', function() {
+	console.log("Connected to server");
+});
 
 $(function(){
 
