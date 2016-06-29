@@ -25,5 +25,5 @@ app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  res.render('index_web.ejs');
+  res.render('mobile_index.ejs');
 });

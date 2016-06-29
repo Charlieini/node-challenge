@@ -13,8 +13,6 @@ function sortShapes(by){
 
   var myArray = $("img");
 
-  console.log(myArray);
-
   myArray.sort(function (a, b) {
 
       a = $(a).attr(by);
@@ -47,7 +45,7 @@ $(function() {
   });
 
   function displayShapeInfo(shape){
-    $('#shape_info').text("type: " + shape.name + " color: " + shape.color + " times seen: " + shape.times_seen);
+    $('#shape_info').text("type: " + shape.name + " || color: " + shape.color + " || times seen: " + shape.times_seen);
     addTimesSeen(shape._id);
   }
 

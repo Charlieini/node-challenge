@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
   db.collection('shapes').find().toArray(function(err, result){
     if (err) return console.log(err)
-    res.render('index.ejs', {shapes: result})
+    res.render('web_index.ejs', {shapes: result})
   })});
 
 app.get('/shapes/:id', function(req,res){
